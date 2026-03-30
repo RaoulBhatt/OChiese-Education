@@ -1,5 +1,5 @@
 {
-  "name": "Canvas LMS",
+  "name": "Canvas LSC",
   "image": "mcr.microsoft.com/devcontainers/ruby:3.1",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
@@ -7,14 +7,14 @@
       "version": "18"
     }
   },
-  "forwardPorts": [3000, 8080],
+  "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
       "label": "Canvas LMS",
-      "onAutoForward": "notify"
+      "onAutoForward": "openBrowser"
     }
   },
-  "postCreateCommand": "bash ./script/docker_dev_setup.sh",
+  "postCreateCommand": "echo 'Canvas LMS is cloned. Run ./script/docker_dev_setup.sh to setup.'",
   "hostRequirements": {
     "cpus": 4,
     "memory": "16gb",
