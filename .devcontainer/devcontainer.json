@@ -1,0 +1,23 @@
+{
+  "name": "Canvas LMS",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.1",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "forwardPorts": [3000, 8080],
+  "portsAttributes": {
+    "3000": {
+      "label": "Canvas LMS",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash ./script/docker_dev_setup.sh",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "32gb"
+  }
+}
